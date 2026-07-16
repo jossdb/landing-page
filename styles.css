@@ -1,3 +1,5 @@
+/* CONFIGURACIÓN GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,161 +11,595 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #222222;
-}
-
-header {
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border-bottom: 1px solid #dddddd;
-}
-
-.logo {
-    color: #5c4ac7;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #222222;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #5c4ac7;
-}
-
-.inicio {
-    min-height: 80vh;
-    padding: 60px 8%;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    background-color: #f4f2ff;
-}
-
-.contenido,
-.imagen {
-    width: 50%;
-}
-
-.contenido h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.contenido p {
-    margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #172033;
     line-height: 1.6;
 }
 
-.imagen img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.boton {
-    display: inline-block;
-    padding: 12px 22px;
-    background-color: #5c4ac7;
-    color: white;
+a {
     text-decoration: none;
-    border-radius: 5px;
 }
 
-.servicios {
-    padding: 70px 8%;
-    text-align: center;
+img {
+    display: block;
+    width: 100%;
 }
 
-.servicios h2 {
-    margin-bottom: 35px;
-}
 
-.tarjetas {
+/* ENCABEZADO */
+
+.encabezado {
+    width: 100%;
+    min-height: 80px;
+    padding: 18px 8%;
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.tarjetas article {
-    width: 33.33%;
-    padding: 25px;
-    border: 1px solid #dddddd;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6246ea;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.menu a {
+    color: #283044;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: #6246ea;
+}
+
+.menu .menu-boton {
+    padding: 10px 18px;
+    background-color: #6246ea;
+    color: white;
     border-radius: 8px;
 }
 
-.tarjetas h3 {
-    margin-bottom: 10px;
-}
 
-.nosotros {
+/* HERO */
+
+.hero {
+    min-height: 88vh;
     padding: 70px 8%;
-    text-align: center;
-    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    background:
+        linear-gradient(
+            135deg,
+            #f8f7ff 0%,
+            #eeebff 100%
+        );
 }
 
-.nosotros h2 {
+.hero-contenido,
+.hero-imagen {
+    width: 50%;
+}
+
+.etiqueta,
+.titulo-seccion span,
+.busqueda-texto span,
+.cuenta-informacion span,
+.login span {
+    color: #6246ea;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    max-width: 620px;
+    margin: 15px 0 22px;
+    font-size: 58px;
+    line-height: 1.08;
+    color: #172033;
+}
+
+.hero-contenido > p {
+    max-width: 580px;
+    font-size: 18px;
+    color: #5e6678;
+}
+
+.hero-botones {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton-principal,
+.formulario button,
+.login-formulario button,
+.campo-busqueda button {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: #6246ea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-principal:hover,
+.formulario button:hover,
+.login-formulario button:hover,
+.campo-busqueda button:hover {
+    background-color: #4932c6;
+}
+
+.boton-secundario {
+    display: inline-block;
+    padding: 13px 24px;
+    color: #6246ea;
+    border: 1px solid #6246ea;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.boton-secundario:hover {
+    background-color: #ebe8ff;
+}
+
+.datos {
+    margin-top: 45px;
+    display: flex;
+    gap: 45px;
+}
+
+.datos div {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos strong {
+    font-size: 25px;
+    color: #172033;
+}
+
+.datos span {
+    color: #6c7280;
+    font-size: 14px;
+}
+
+.hero-imagen {
+    position: relative;
+}
+
+.hero-imagen img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(40, 30, 100, 0.18);
+}
+
+.tarjeta-flotante {
+    position: absolute;
+    left: -30px;
+    bottom: 35px;
+    min-width: 230px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(30, 30, 60, 0.18);
+}
+
+.tarjeta-flotante strong {
+    color: #172033;
+}
+
+.tarjeta-flotante span {
+    font-size: 13px;
+    color: #687080;
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    padding: 90px 8%;
+}
+
+.titulo-seccion {
+    max-width: 680px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.titulo-seccion h2,
+.busqueda h2,
+.cuenta h2,
+.login h2 {
+    margin: 8px 0 14px;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.titulo-seccion p,
+.busqueda-texto p,
+.cuenta-informacion p,
+.login p {
+    color: #687080;
+}
+
+
+/* SERVICIOS */
+
+.tarjetas {
+    display: flex;
+    gap: 25px;
+}
+
+.tarjeta {
+    width: 33.33%;
+    padding: 32px;
+    background-color: white;
+    border: 1px solid #e1e3ea;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(40, 40, 80, 0.1);
+}
+
+.tarjeta.destacada {
+    border: 2px solid #6246ea;
+}
+
+.numero {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+    display: grid;
+    place-items: center;
+    background-color: #eeebff;
+    color: #6246ea;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.tarjeta p {
+    min-height: 78px;
     margin-bottom: 20px;
+    color: #687080;
 }
 
-.contacto {
-    padding: 70px 8%;
-    text-align: center;
+.tarjeta a {
+    color: #6246ea;
+    font-weight: bold;
 }
 
-.contacto p {
-    margin: 15px 0 25px;
+
+/* BÚSQUEDA */
+
+.busqueda {
+    margin: 20px 8%;
+    padding: 55px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: #172033;
+    color: white;
+    border-radius: 22px;
 }
 
-footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #222222;
+.busqueda-texto,
+.formulario-busqueda {
+    width: 50%;
+}
+
+.busqueda-texto h2 {
     color: white;
 }
 
+.busqueda-texto p {
+    color: #c5cad5;
+}
 
-/* RESPONSIVO PARA CELULARES */
+.formulario-busqueda label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-@media (max-width: 768px) {
+.campo-busqueda {
+    padding: 7px;
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    border-radius: 10px;
+}
 
-    header {
+.campo-busqueda input {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+
+/* BENEFICIOS */
+
+.beneficios {
+    background-color: #f8f9fc;
+}
+
+.beneficios-contenedor {
+    display: flex;
+    gap: 25px;
+}
+
+.beneficios-contenedor article {
+    width: 33.33%;
+    padding: 28px;
+    text-align: center;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.beneficios-contenedor h3 {
+    margin-bottom: 10px;
+}
+
+.beneficios-contenedor p {
+    color: #687080;
+}
+
+
+/* REGISTRO */
+
+.cuenta {
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background-color: #eeebff;
+}
+
+.cuenta-informacion,
+.formulario {
+    width: 50%;
+}
+
+.cuenta-informacion ul {
+    margin-top: 25px;
+    padding-left: 20px;
+}
+
+.cuenta-informacion li {
+    margin-bottom: 10px;
+}
+
+.formulario {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(70, 50, 140, 0.12);
+}
+
+.formulario h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.formulario label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario input,
+.login-formulario input,
+.campo-busqueda input {
+    width: 100%;
+    padding: 13px;
+    font-family: inherit;
+    border: 1px solid #d7dae2;
+    border-radius: 8px;
+}
+
+
+/* LOGIN */
+
+.login {
+    padding: 80px 8%;
+    background-color: white;
+}
+
+.login-contenido {
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: #f8f9fc;
+    border-radius: 20px;
+}
+
+.login-contenido > div,
+.login-formulario {
+    width: 50%;
+}
+
+.login-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111827;
+    color: white;
+}
+
+.footer h3 {
+    font-size: 25px;
+}
+
+.footer p {
+    color: #c4c8d2;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .encabezado {
         flex-direction: column;
         gap: 15px;
     }
 
-    nav {
-        flex-wrap: wrap;
+    .menu {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .inicio {
+    .hero,
+    .busqueda,
+    .cuenta,
+    .login-contenido {
         flex-direction: column;
+    }
+
+    .hero-contenido,
+    .hero-imagen,
+    .busqueda-texto,
+    .formulario-busqueda,
+    .cuenta-informacion,
+    .formulario,
+    .login-contenido > div,
+    .login-formulario {
+        width: 100%;
+    }
+
+    .hero {
         text-align: center;
     }
 
-    .contenido,
-    .imagen {
-        width: 100%;
+    .hero h1 {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 43px;
     }
 
-    .contenido h1 {
-        font-size: 34px;
+    .hero-contenido > p {
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .tarjetas {
+    .hero-botones,
+    .datos {
+        justify-content: center;
+    }
+
+    .tarjeta-flotante {
+        left: 20px;
+    }
+
+    .tarjetas,
+    .beneficios-contenedor {
         flex-direction: column;
     }
 
-    .tarjetas article {
+    .tarjeta,
+    .beneficios-contenedor article {
         width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .menu {
+        gap: 12px;
+    }
+
+    .hero,
+    .seccion,
+    .cuenta,
+    .login {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-imagen img {
+        height: 330px;
+    }
+
+    .tarjeta-flotante {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .datos {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .busqueda {
+        margin: 10px 4%;
+        padding: 30px 20px;
+    }
+
+    .campo-busqueda {
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .campo-busqueda input {
+        background-color: white;
+    }
+
+    .formulario,
+    .login-contenido {
+        padding: 24px;
     }
 
 }
