@@ -1,106 +1,427 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mi Landing Page</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ServiPlus</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h2 class="logo">MiProyecto</h2>
+    <!-- ENCABEZADO -->
 
-        <nav>
+    <header class="encabezado">
+
+        <div class="logo">
+            ServiPlus
+        </div>
+
+        <nav class="menu">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#buscar">Buscar</a>
+            <a href="#registro">Registrarse</a>
+            <a href="#login" class="menu-boton">Ingresar</a>
         </nav>
+
     </header>
+
 
     <main>
 
-        <section class="inicio" id="inicio">
+        <!-- PORTADA -->
 
-            <div class="contenido">
-                <h1>Encuentra la mejor solución para ti</h1>
+        <section class="hero" id="inicio">
+
+            <div class="hero-contenido">
+
+                <span class="etiqueta">
+                    SERVICIOS RÁPIDOS Y CONFIABLES
+                </span>
+
+                <h1>
+                    Encuentra el servicio ideal para ti
+                </h1>
 
                 <p>
-                    Ofrecemos un servicio sencillo, rápido y seguro para
-                    ayudarte a cumplir tus objetivos.
+                    Conecta con profesionales, consulta diferentes servicios
+                    y solicita atención de forma fácil y segura.
                 </p>
 
-                <a href="#servicios" class="boton">
-                    Ver servicios
-                </a>
+                <div class="hero-botones">
+
+                    <a href="#buscar" class="boton-principal">
+                        Buscar servicios
+                    </a>
+
+                    <a href="#registro" class="boton-secundario">
+                        Crear cuenta
+                    </a>
+
+                </div>
+
+                <div class="datos">
+
+                    <div>
+                        <strong>100+</strong>
+                        <span>Servicios</span>
+                    </div>
+
+                    <div>
+                        <strong>500+</strong>
+                        <span>Usuarios</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Disponibilidad</span>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="imagen">
+
+            <div class="hero-imagen">
+
                 <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                    alt="Personas trabajando juntas"
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+                    alt="Equipo de profesionales trabajando"
                 >
+
+                <div class="tarjeta-flotante">
+                    <strong>Servicio confirmado</strong>
+                    <span>Atención rápida y segura</span>
+                </div>
+
             </div>
 
         </section>
 
-        <section class="servicios" id="servicios">
 
-            <h2>Nuestros servicios</h2>
+        <!-- HISTORIA: VISUALIZAR SERVICIOS -->
+
+        <section class="seccion servicios" id="servicios">
+
+            <div class="titulo-seccion">
+
+                <span>NUESTROS SERVICIOS</span>
+
+                <h2>
+                    Soluciones para cada necesidad
+                </h2>
+
+                <p>
+                    Revisa las opciones disponibles y selecciona el servicio
+                    que mejor se adapte a ti.
+                </p>
+
+            </div>
+
 
             <div class="tarjetas">
 
-                <article>
-                    <h3>Servicio 1</h3>
-                    <p>Descripción breve del primer servicio.</p>
+                <article class="tarjeta">
+
+                    <div class="numero">01</div>
+
+                    <h3>Asesoría profesional</h3>
+
+                    <p>
+                        Recibe orientación personalizada de profesionales
+                        especializados.
+                    </p>
+
+                    <a href="#registro">
+                        Solicitar servicio
+                    </a>
+
                 </article>
 
-                <article>
-                    <h3>Servicio 2</h3>
-                    <p>Descripción breve del segundo servicio.</p>
+
+                <article class="tarjeta destacada">
+
+                    <div class="numero">02</div>
+
+                    <h3>Soporte técnico</h3>
+
+                    <p>
+                        Obtén ayuda rápida para resolver problemas con tus
+                        equipos o sistemas.
+                    </p>
+
+                    <a href="#registro">
+                        Solicitar servicio
+                    </a>
+
                 </article>
 
-                <article>
-                    <h3>Servicio 3</h3>
-                    <p>Descripción breve del tercer servicio.</p>
+
+                <article class="tarjeta">
+
+                    <div class="numero">03</div>
+
+                    <h3>Mantenimiento</h3>
+
+                    <p>
+                        Encuentra especialistas para el mantenimiento y cuidado
+                        de tus equipos.
+                    </p>
+
+                    <a href="#registro">
+                        Solicitar servicio
+                    </a>
+
                 </article>
 
             </div>
 
         </section>
 
-        <section class="nosotros" id="nosotros">
 
-            <h2>Sobre nosotros</h2>
+        <!-- HISTORIA: BUSCAR SERVICIOS -->
 
-            <p>
-                Somos un equipo comprometido con brindar soluciones claras,
-                accesibles y fáciles de utilizar.
-            </p>
+        <section class="busqueda" id="buscar">
+
+            <div class="busqueda-texto">
+
+                <span>ENCUENTRA LO QUE NECESITAS</span>
+
+                <h2>
+                    Busca un servicio
+                </h2>
+
+                <p>
+                    Ingresa una palabra relacionada con el servicio que deseas
+                    encontrar.
+                </p>
+
+            </div>
+
+
+            <form class="formulario-busqueda" action="#servicios">
+
+                <label for="servicio">
+                    ¿Qué servicio estás buscando?
+                </label>
+
+                <div class="campo-busqueda">
+
+                    <input
+                        type="search"
+                        id="servicio"
+                        placeholder="Ejemplo: soporte técnico"
+                        required
+                    >
+
+                    <button type="submit">
+                        Buscar
+                    </button>
+
+                </div>
+
+            </form>
 
         </section>
 
-        <section class="contacto" id="contacto">
 
-            <h2>Contáctanos</h2>
+        <!-- BENEFICIOS -->
 
-            <p>Escríbenos para obtener más información.</p>
+        <section class="seccion beneficios">
 
-            <a href="mailto:correo@ejemplo.com" class="boton">
-                Enviar correo
-            </a>
+            <div class="titulo-seccion">
+
+                <span>BENEFICIOS</span>
+
+                <h2>
+                    Una experiencia sencilla y segura
+                </h2>
+
+            </div>
+
+
+            <div class="beneficios-contenedor">
+
+                <article>
+                    <h3>Fácil de utilizar</h3>
+
+                    <p>
+                        Navega por una interfaz clara, sencilla y ordenada.
+                    </p>
+                </article>
+
+
+                <article>
+                    <h3>Atención rápida</h3>
+
+                    <p>
+                        Encuentra información y solicita servicios en pocos pasos.
+                    </p>
+                </article>
+
+
+                <article>
+                    <h3>Opciones variadas</h3>
+
+                    <p>
+                        Consulta diferentes categorías y profesionales disponibles.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORIA: REGISTRAR USUARIO -->
+
+        <section class="cuenta" id="registro">
+
+            <div class="cuenta-informacion">
+
+                <span>ÚNETE A NOSOTROS</span>
+
+                <h2>
+                    Crea tu cuenta gratis
+                </h2>
+
+                <p>
+                    Regístrate para solicitar servicios, recibir información
+                    y acceder a más opciones.
+                </p>
+
+                <ul>
+                    <li>Consulta servicios disponibles.</li>
+                    <li>Solicita atención profesional.</li>
+                    <li>Accede a tu cuenta desde cualquier dispositivo.</li>
+                </ul>
+
+            </div>
+
+
+            <form class="formulario">
+
+                <h3>Formulario de registro</h3>
+
+                <label for="nombre">
+                    Nombre completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ingresa tu nombre"
+                    required
+                >
+
+
+                <label for="correo-registro">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo-registro"
+                    placeholder="correo@ejemplo.com"
+                    required
+                >
+
+
+                <label for="clave-registro">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="clave-registro"
+                    placeholder="Crea una contraseña"
+                    required
+                >
+
+
+                <button type="submit">
+                    Crear cuenta
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- HISTORIA: INICIAR SESIÓN -->
+
+        <section class="login" id="login">
+
+            <div class="login-contenido">
+
+                <div>
+
+                    <span>BIENVENIDO NUEVAMENTE</span>
+
+                    <h2>
+                        Accede a tu cuenta
+                    </h2>
+
+                    <p>
+                        Ingresa tus datos para consultar tus servicios.
+                    </p>
+
+                </div>
+
+
+                <form class="login-formulario">
+
+                    <input
+                        type="email"
+                        placeholder="Correo electrónico"
+                        aria-label="Correo electrónico"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        placeholder="Contraseña"
+                        aria-label="Contraseña"
+                        required
+                    >
+
+                    <button type="submit">
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+            </div>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>2026 MiProyecto - Todos los derechos reservados.</p>
+
+    <footer class="footer">
+
+        <div>
+            <h3>ServiPlus</h3>
+
+            <p>
+                Servicios rápidos, fáciles y confiables.
+            </p>
+        </div>
+
+        <p>
+            © 2026 ServiPlus. Todos los derechos reservados.
+        </p>
+
     </footer>
 
 </body>
+
 </html>
